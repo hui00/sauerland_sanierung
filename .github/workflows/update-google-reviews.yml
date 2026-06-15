@@ -2,11 +2,13 @@ name: Update Google Reviews
 
 on:
   schedule:
-    - cron: "17 3 * * 1"
+    # Einmal im Monat: am 1. um 03:17 UTC
+    - cron: "17 3 1 * *"
   workflow_dispatch:
 
 permissions:
   contents: write
+  actions: write
 
 jobs:
   update:
@@ -32,9 +34,11 @@ jobs:
           GOOGLE_PLACE_QUERY: Sauerland Sanierung Bremke 17 58638 Iserlohn
 
       - name: Commit review data
+        id: commit
         run: |
           if git diff --quiet -- src/data/google-reviews.json; then
             echo "No review changes to commit."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
 
@@ -43,3 +47,12 @@ jobs:
           git add src/data/google-reviews.json
           git commit -m "Update Google reviews"
           git push
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      # A commit pushed with GITHUB_TOKEN does NOT auto-trigger the deploy
+      # workflow, so we dispatch it explicitly when reviews actually changed.
+      - name: Trigger Pages deploy
+        if: steps.commit.outputs.changed == 'true'
+        run: gh workflow run deploy-pages.yml --ref main
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
