@@ -1,9 +1,31 @@
 {
   "source": "Google Maps",
-  "placeId": "",
-  "googleMapsUri": "https://www.google.com/maps/search/?api=1&query=Sauerland+Sanierung+Bremke+17+58638+Iserlohn",
+  "placeId": "ChIJX7hp-apBuUcRDZwlnWBuX90",
+  "googleMapsUri": "https://maps.google.com/?cid=15951589766401989645&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA",
   "rating": 5,
   "reviewCount": 3,
-  "updatedAt": "2026-06-15T00:00:00.000Z",
-  "reviews": []
+  "updatedAt": "2026-06-15T13:05:17.676Z",
+  "reviews": [
+    {
+      "author": "Sandra ter Fehr",
+      "rating": 5,
+      "date": "vor 2 Jahren",
+      "text": "Sind sehr zufrieden. Empfehle die Firma weiter.",
+      "uri": "https://www.google.com/maps/contrib/117483842048472131766/reviews"
+    },
+    {
+      "author": "Paul Mertens",
+      "rating": 5,
+      "date": "vor einem Jahr",
+      "text": "Bestes Unternehmen hier im Umkreis hammer geil",
+      "uri": "https://www.google.com/maps/contrib/116171779080670734338/reviews"
+    },
+    {
+      "author": "Stefan Slupikowski",
+      "rating": 5,
+      "date": "vor 2 Jahren",
+      "text": "Sehr kompetenter Ansprechpartner, gute Arbeit und sehr zuverlässig. Gerne wieder.",
+      "uri": "https://www.google.com/maps/contrib/101236546958939099614/reviews"
+    }
+  ]
 }
