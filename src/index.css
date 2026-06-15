@@ -5,28 +5,28 @@
 @layer base {
   :root {
     --background: 30 33% 99%;
-    --foreground: 222 30% 14%;
+    --foreground: 25 25% 14%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222 30% 14%;
+    --card-foreground: 25 25% 14%;
 
-    /* Amber / construction orange */
-    --primary: 27 96% 48%;
+    /* Brand: deep brick red (logo roof & wordmark) */
+    --primary: 6 72% 38%;
     --primary-foreground: 0 0% 100%;
 
-    /* Steel / anthracite */
-    --secondary: 217 33% 22%;
+    /* Brand: warm brown (logo base) */
+    --secondary: 25 32% 26%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 30 20% 95%;
-    --muted-foreground: 222 14% 42%;
+    --muted: 28 22% 95%;
+    --muted-foreground: 25 12% 40%;
 
-    --accent: 27 96% 48%;
+    --accent: 6 72% 38%;
     --accent-foreground: 0 0% 100%;
 
-    --border: 222 14% 88%;
-    --input: 222 14% 86%;
-    --ring: 27 96% 48%;
+    --border: 28 16% 88%;
+    --input: 28 16% 86%;
+    --ring: 6 72% 38%;
 
     --radius: 1rem;
   }
@@ -67,11 +67,11 @@
   }
 
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-amber-500;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary;
   }
 
-  .bg-gradient-amber {
-    @apply bg-gradient-to-r from-primary to-amber-500 text-white;
+  .bg-gradient-brand {
+    @apply bg-gradient-to-r from-primary to-secondary text-white;
   }
 
   .card-hover {

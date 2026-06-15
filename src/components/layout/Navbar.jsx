@@ -2,13 +2,15 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import BrandMark from '@/components/ui/BrandMark';
 import { cn } from '@/lib/utils';
-import { COMPANY_NAME, PHONE_DISPLAY, PHONE_TEL } from '@/lib/contact';
+import { PHONE_DISPLAY, PHONE_TEL } from '@/lib/contact';
 
 const navLinks = [
   { name: 'Start', id: 'start' },
   { name: 'Leistungen', id: 'leistungen' },
   { name: 'Referenzen', id: 'referenzen' },
+  { name: 'Bewertungen', id: 'bewertungen' },
   { name: 'Über uns', id: 'ueber-uns' },
   { name: 'Kontakt', id: 'kontakt' },
 ];
@@ -41,16 +43,16 @@ const Navbar = ({ onNavigate }) => {
     >
       <div className="container-custom flex items-center justify-between">
         <a href="#start" onClick={(e) => handleClick(e, 'start')} className="flex items-center gap-2.5">
-          <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-amber font-display text-lg font-extrabold text-white shadow-md shadow-primary/30">
-            SS
-          </span>
-          <span
-            className={cn(
-              'font-display text-lg font-bold tracking-tight transition-colors',
-              onLight ? 'text-foreground' : 'text-white drop-shadow'
+          <BrandMark className="h-10 w-10" />
+          <span className="font-display text-lg font-bold tracking-tight transition-colors">
+            {onLight ? (
+              <>
+                <span className="text-primary">Sauerland</span>{' '}
+                <span className="text-secondary">Sanierung</span>
+              </>
+            ) : (
+              <span className="text-white drop-shadow">Sauerland Sanierung</span>
             )}
-          >
-            {COMPANY_NAME}
           </span>
         </a>
 
@@ -68,7 +70,7 @@ const Navbar = ({ onNavigate }) => {
               {link.name}
             </a>
           ))}
-          <Button asChild className="bg-gradient-amber shadow-md shadow-primary/30 hover:opacity-90">
+          <Button asChild className="bg-gradient-brand shadow-md shadow-primary/30 hover:opacity-90">
             <a href={`tel:${PHONE_TEL}`}>
               <Phone className="mr-2 h-4 w-4" />
               {PHONE_DISPLAY}
@@ -108,7 +110,7 @@ const Navbar = ({ onNavigate }) => {
                   {link.name}
                 </a>
               ))}
-              <Button asChild className="mt-2 w-full bg-gradient-amber">
+              <Button asChild className="mt-2 w-full bg-gradient-brand">
                 <a href={`tel:${PHONE_TEL}`}>
                   <Phone className="mr-2 h-4 w-4" />
                   {PHONE_DISPLAY}

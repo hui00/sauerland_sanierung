@@ -1,9 +1,11 @@
 import React from 'react';
-import { MapPin, Phone, Mail, Facebook, Instagram, Youtube } from 'lucide-react';
+import { MapPin, Phone, Printer, Mail, Facebook } from 'lucide-react';
+import BrandMark from '@/components/ui/BrandMark';
 import {
   COMPANY_NAME,
   PHONE_DISPLAY,
   PHONE_TEL,
+  FAX_DISPLAY,
   EMAIL,
   ADDRESS_FULL,
   SOCIAL,
@@ -14,6 +16,7 @@ const quickLinks = [
   { name: 'Start', id: 'start' },
   { name: 'Leistungen', id: 'leistungen' },
   { name: 'Referenzen', id: 'referenzen' },
+  { name: 'Bewertungen', id: 'bewertungen' },
   { name: 'Über uns', id: 'ueber-uns' },
   { name: 'Kontakt', id: 'kontakt' },
 ];
@@ -27,9 +30,7 @@ const Footer = ({ onNavigate }) => {
         <div className="grid grid-cols-1 gap-10 md:grid-cols-3">
           <div>
             <div className="mb-4 flex items-center gap-3">
-              <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-amber font-display text-lg font-extrabold text-white">
-                SS
-              </span>
+              <BrandMark className="h-12 w-12" />
               <span className="font-display text-xl font-bold text-white">{COMPANY_NAME}</span>
             </div>
             <p className="mb-5 max-w-xs text-sm text-slate-400">
@@ -39,12 +40,6 @@ const Footer = ({ onNavigate }) => {
             <div className="flex gap-3">
               <a href={SOCIAL.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-blue-600">
                 <Facebook className="h-4 w-4" />
-              </a>
-              <a href={SOCIAL.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-pink-600">
-                <Instagram className="h-4 w-4" />
-              </a>
-              <a href={SOCIAL.youtube} target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-red-600">
-                <Youtube className="h-4 w-4" />
               </a>
             </div>
           </div>
@@ -90,6 +85,10 @@ const Footer = ({ onNavigate }) => {
                 <Phone className="h-5 w-5 shrink-0 text-primary" />
                 {PHONE_DISPLAY}
               </a>
+              <p className="flex items-center gap-3 text-sm text-slate-400">
+                <Printer className="h-5 w-5 shrink-0 text-primary" />
+                Fax: {FAX_DISPLAY}
+              </p>
               <a href={mailtoUrl()} className="flex items-center gap-3 text-sm text-slate-400 transition-colors hover:text-white">
                 <Mail className="h-5 w-5 shrink-0 text-primary" />
                 {EMAIL}

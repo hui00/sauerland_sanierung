@@ -47,9 +47,9 @@ const AboutSection = ({ onNavigate }) => {
           >
             <div className="overflow-hidden rounded-3xl shadow-xl">
               <img
-                alt="Handwerker bei Renovierungsarbeiten"
+                alt="Handwerker mit Werkzeug auf der Baustelle"
                 className="h-full w-full object-cover"
-                src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1200&q=80"
+                src="img/ueber-uns-handwerker.jpg"
               />
             </div>
             <motion.div
@@ -57,7 +57,7 @@ const AboutSection = ({ onNavigate }) => {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className="absolute -bottom-5 -right-3 flex items-center gap-2 rounded-2xl bg-gradient-amber px-5 py-3 text-white shadow-lg sm:-right-5"
+              className="absolute -bottom-5 -right-3 flex items-center gap-2 rounded-2xl bg-gradient-brand px-5 py-3 text-white shadow-lg sm:-right-5"
             >
               <HardHat className="h-6 w-6" />
               <p className="text-lg font-bold">Komplett aus einer Hand</p>
@@ -103,7 +103,7 @@ const AboutSection = ({ onNavigate }) => {
             </div>
 
             <div className="flex flex-col gap-3 sm:flex-row">
-              <Button asChild size="lg" className="bg-gradient-amber text-white hover:opacity-90">
+              <Button asChild size="lg" className="bg-gradient-brand text-white hover:opacity-90">
                 <a href={`tel:${PHONE_TEL}`}>
                   <Phone className="mr-2 h-5 w-5" />
                   Jetzt anrufen

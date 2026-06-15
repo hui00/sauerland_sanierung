@@ -1,5 +1,5 @@
 import React from 'react';
-import { COMPANY_NAME, ADDRESS_FULL, PHONE_DISPLAY, EMAIL } from '@/lib/contact';
+import { COMPANY_NAME, OWNER, ADDRESS_FULL, PHONE_DISPLAY, EMAIL } from '@/lib/contact';
 
 // HINWEIS: Muster-Datenschutzerklärung. Bitte vor Veröffentlichung rechtlich prüfen lassen.
 const Datenschutz = () => {
@@ -15,6 +15,7 @@ const Datenschutz = () => {
         <p className="text-muted-foreground">
           Verantwortlich für die Datenverarbeitung auf dieser Website ist:
         </p>
+        <p>{OWNER}</p>
         <p>{COMPANY_NAME}</p>
         <p>{ADDRESS_FULL}</p>
         <p>Telefon: {PHONE_DISPLAY}</p>

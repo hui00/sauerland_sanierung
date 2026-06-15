@@ -2,15 +2,15 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 
-// Placeholder reference photos – replace the URLs with your own project images
-// (drop files into /public/img and reference them as "img/your-photo.jpg").
+// Reference photos stored locally in /public/img – simply replace these files
+// (same names) with your own project photos to show real Sauerland-Sanierung work.
 const references = [
-  { src: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80', caption: 'Wohnungssanierung' },
-  { src: 'https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?auto=format&fit=crop&w=1200&q=80', caption: 'Streicharbeiten' },
-  { src: 'https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=1200&q=80', caption: 'Fliesenarbeiten' },
-  { src: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=80', caption: 'Fassade & Gerüst' },
-  { src: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=1200&q=80', caption: 'Bodenbeläge' },
-  { src: 'https://images.unsplash.com/photo-1513584684374-8bab748fbf90?auto=format&fit=crop&w=1200&q=80', caption: 'Fertige Räume' },
+  { src: 'img/ref-wohnungssanierung.jpg', caption: 'Wohnungssanierung' },
+  { src: 'img/ref-streichen.jpg', caption: 'Streicharbeiten' },
+  { src: 'img/ref-fliesen.jpg', caption: 'Fliesenarbeiten' },
+  { src: 'img/ref-fassade.jpg', caption: 'Fassade & Gerüst' },
+  { src: 'img/ref-fenster.jpg', caption: 'Fenster & Außenbereich' },
+  { src: 'img/ref-haus.jpg', caption: 'Rund ums Haus' },
 ];
 
 const ReferencesSection = () => {

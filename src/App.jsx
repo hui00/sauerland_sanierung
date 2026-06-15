@@ -6,6 +6,7 @@ import Hero from '@/components/sections/Hero';
 import ServicesSection from '@/components/sections/ServicesSection';
 import AboutSection from '@/components/sections/AboutSection';
 import ReferencesSection from '@/components/sections/ReferencesSection';
+import TestimonialsSection from '@/components/sections/TestimonialsSection';
 import ContactSection from '@/components/sections/ContactSection';
 import Impressum from '@/components/pages/Impressum';
 import Datenschutz from '@/components/pages/Datenschutz';
@@ -57,6 +58,7 @@ function App() {
             <ServicesSection />
             <AboutSection onNavigate={navigate} />
             <ReferencesSection />
+            <TestimonialsSection />
             <ContactSection />
           </>
         )}
@@ -80,7 +82,7 @@ function App() {
       <a
         href={`tel:${PHONE_TEL}`}
         aria-label={`Anrufen: ${PHONE_DISPLAY}`}
-        className="group fixed bottom-5 right-5 z-50 flex items-center gap-2 rounded-full bg-gradient-amber px-4 py-4 text-white shadow-lg shadow-primary/30 transition-all duration-300 hover:shadow-xl"
+        className="group fixed bottom-5 right-5 z-50 flex items-center gap-2 rounded-full bg-gradient-brand px-4 py-4 text-white shadow-lg shadow-primary/30 transition-all duration-300 hover:shadow-xl"
       >
         <span className="absolute inset-0 animate-ping rounded-full bg-primary opacity-20" />
         <Phone className="relative h-6 w-6" />

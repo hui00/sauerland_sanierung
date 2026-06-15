@@ -1,10 +1,17 @@
 import React from 'react';
-import { COMPANY_NAME, ADDRESS_STREET, ADDRESS_CITY, PHONE_DISPLAY, EMAIL } from '@/lib/contact';
+import {
+  COMPANY_NAME,
+  OWNER,
+  ADDRESS_STREET,
+  ADDRESS_CITY,
+  PHONE_DISPLAY,
+  FAX_DISPLAY,
+  EMAIL,
+} from '@/lib/contact';
 
-// HINWEIS: Bitte die mit [...] markierten Angaben rechtlich prüfen und ergänzen.
 const Impressum = () => {
   return (
-    <article className="prose-sm mx-auto max-w-3xl space-y-8">
+    <article className="mx-auto max-w-3xl space-y-8">
       <header>
         <h1 className="font-display text-3xl font-bold md:text-4xl">Impressum</h1>
         <p className="mt-2 text-muted-foreground">Angaben gemäß § 5 DDG (ehemals § 5 TMG)</p>
@@ -13,7 +20,7 @@ const Impressum = () => {
       <section className="space-y-1">
         <h2 className="font-display text-xl font-semibold">Anbieter</h2>
         <p>{COMPANY_NAME}</p>
-        <p>[Inhaber: Vor- und Nachname]</p>
+        <p>Inhaber: {OWNER}</p>
         <p>{ADDRESS_STREET}</p>
         <p>{ADDRESS_CITY}</p>
       </section>
@@ -21,7 +28,15 @@ const Impressum = () => {
       <section className="space-y-1">
         <h2 className="font-display text-xl font-semibold">Kontakt</h2>
         <p>Telefon: {PHONE_DISPLAY}</p>
+        <p>Telefax: {FAX_DISPLAY}</p>
         <p>E-Mail: {EMAIL}</p>
+      </section>
+
+      <section className="space-y-1">
+        <h2 className="font-display text-xl font-semibold">Registereintrag</h2>
+        <p>Eintragung im Handelsregister.</p>
+        <p>Registergericht: Amtsgericht Iserlohn</p>
+        <p>Registernummer: [bitte ergänzen]</p>
       </section>
 
       <section className="space-y-1">
@@ -34,8 +49,20 @@ const Impressum = () => {
       </section>
 
       <section className="space-y-1">
+        <h2 className="font-display text-xl font-semibold">Aufsichtsbehörde</h2>
+        <p>Ordnungsamt Lüdenscheid</p>
+        <p>Märkischer Kreis – Der Landrat</p>
+      </section>
+
+      <section className="space-y-1">
+        <h2 className="font-display text-xl font-semibold">Berufshaftpflichtversicherung</h2>
+        <p>Versicherer: Provinzial</p>
+        <p>Räumlicher Geltungsbereich: [bitte ergänzen]</p>
+      </section>
+
+      <section className="space-y-1">
         <h2 className="font-display text-xl font-semibold">Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>
-        <p>[Vor- und Nachname]</p>
+        <p>{OWNER}</p>
         <p>{ADDRESS_STREET}, {ADDRESS_CITY}</p>
       </section>
 
@@ -52,8 +79,8 @@ const Impressum = () => {
       </section>
 
       <p className="rounded-xl bg-muted p-4 text-sm text-muted-foreground">
-        Hinweis: Dieser Text ist ein Muster. Bitte lassen Sie die Angaben vor der Veröffentlichung
-        rechtlich prüfen und ergänzen Sie die mit [...] markierten Felder.
+        Hinweis: Die mit [...] markierten Felder (Registernummer, USt-IdNr., Geltungsbereich der
+        Versicherung) bitte noch ergänzen und die Angaben vor Veröffentlichung rechtlich prüfen.
       </p>
     </article>
   );

@@ -15,9 +15,9 @@ const Hero = ({ onNavigate }) => {
     <section id="start" className="relative flex min-h-screen items-center justify-center overflow-hidden">
       <div className="absolute inset-0 z-0">
         <img
-          alt="Sanierte Wohnung mit natürlichem Licht"
+          alt="Bauplanung für eine Sanierung"
           className="h-full w-full object-cover"
-          src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1920&q=80"
+          src="img/hero-planung.jpg"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-slate-900/80 via-slate-900/55 to-slate-900/80" />
       </div>
@@ -47,7 +47,7 @@ const Hero = ({ onNavigate }) => {
             <Button
               asChild
               size="lg"
-              className="bg-gradient-amber px-8 py-6 text-lg text-white shadow-lg shadow-primary/30 hover:opacity-90"
+              className="bg-gradient-brand px-8 py-6 text-lg text-white shadow-lg shadow-primary/30 hover:opacity-90"
             >
               <a href={`tel:${PHONE_TEL}`}>
                 <Phone className="mr-2 h-5 w-5" />

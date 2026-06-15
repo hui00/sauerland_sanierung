@@ -1,10 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { Phone, Mail, MapPin, ExternalLink, Facebook, Instagram, Youtube } from 'lucide-react';
+import { Phone, Mail, MapPin, Printer, ExternalLink, Facebook } from 'lucide-react';
 import {
   PHONE_DISPLAY,
   PHONE_TEL,
+  FAX_DISPLAY,
   EMAIL,
   ADDRESS_FULL,
   SOCIAL,
@@ -16,6 +17,7 @@ import {
 const ContactSection = () => {
   const contactItems = [
     { icon: Phone, label: 'Telefon', value: PHONE_DISPLAY, href: `tel:${PHONE_TEL}` },
+    { icon: Printer, label: 'Telefax', value: FAX_DISPLAY, href: null },
     { icon: Mail, label: 'E-Mail', value: EMAIL, href: mailtoUrl() },
     { icon: MapPin, label: 'Adresse', value: ADDRESS_FULL, href: MAP_LINK_URL },
   ];
@@ -51,7 +53,7 @@ const ContactSection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="flex flex-col rounded-3xl bg-gradient-to-br from-secondary to-slate-800 p-8 text-white md:p-10"
+            className="flex flex-col rounded-3xl bg-gradient-to-br from-secondary to-[#3a2418] p-8 text-white md:p-10"
           >
             <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-white/70">Schnellster Weg</p>
             <h3 className="mb-4 text-2xl font-bold md:text-3xl">Direkt anrufen</h3>
@@ -60,7 +62,7 @@ const ContactSection = () => {
             </p>
 
             <div className="flex flex-col gap-3 sm:flex-row">
-              <Button asChild size="lg" className="bg-gradient-amber text-white hover:opacity-90">
+              <Button asChild size="lg" className="bg-gradient-brand text-white hover:opacity-90">
                 <a href={`tel:${PHONE_TEL}`}>
                   <Phone className="mr-2 h-5 w-5" />
                   {PHONE_DISPLAY}
@@ -80,17 +82,23 @@ const ContactSection = () => {
             </div>
 
             <div className="mt-8 space-y-5">
-              {contactItems.map(({ icon: Icon, label, value, href }) => (
-                <a key={label} href={href} className="flex items-start gap-4 transition-opacity hover:opacity-80">
-                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white/20">
-                    <Icon className="h-5 w-5" />
-                  </span>
-                  <div>
-                    <p className="font-semibold">{label}</p>
-                    <p className="text-sm text-white/85">{value}</p>
-                  </div>
-                </a>
-              ))}
+              {contactItems.map(({ icon: Icon, label, value, href }) => {
+                const Wrapper = href ? 'a' : 'div';
+                return (
+                  <Wrapper
+                    key={label}
+                    {...(href ? { href, className: 'flex items-start gap-4 transition-opacity hover:opacity-80' } : { className: 'flex items-start gap-4' })}
+                  >
+                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white/20">
+                      <Icon className="h-5 w-5" />
+                    </span>
+                    <div>
+                      <p className="font-semibold">{label}</p>
+                      <p className="text-sm text-white/85">{value}</p>
+                    </div>
+                  </Wrapper>
+                );
+              })}
             </div>
 
             <div className="mt-auto pt-8">
@@ -104,24 +112,6 @@ const ContactSection = () => {
                   className="flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-blue-600"
                 >
                   <Facebook className="h-5 w-5" />
-                </a>
-                <a
-                  href={SOCIAL.instagram}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Instagram"
-                  className="flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-pink-600"
-                >
-                  <Instagram className="h-5 w-5" />
-                </a>
-                <a
-                  href={SOCIAL.youtube}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="YouTube"
-                  className="flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-red-600"
-                >
-                  <Youtube className="h-5 w-5" />
                 </a>
               </div>
             </div>

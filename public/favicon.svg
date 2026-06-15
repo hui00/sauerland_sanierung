@@ -1,5 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="14" fill="#f97316" />
-  <text x="50%" y="52%" dominant-baseline="central" text-anchor="middle"
-    font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="30" font-weight="800" fill="#ffffff">SS</text>
+  <rect width="64" height="64" rx="14" fill="#ffffff" />
+  <g transform="translate(8 8) scale(1.0)">
+    <path d="M6 24 L24 42 L42 24" fill="none" stroke="#6b4a2f" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M6 24 L24 6 L42 24" fill="none" stroke="#b5271c" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+    <g fill="#6b4a2f">
+      <rect x="19" y="19" width="4" height="4" rx="0.6" />
+      <rect x="25" y="19" width="4" height="4" rx="0.6" />
+      <rect x="19" y="25" width="4" height="4" rx="0.6" />
+      <rect x="25" y="25" width="4" height="4" rx="0.6" />
+    </g>
+  </g>
 </svg>
