@@ -51,3 +51,4 @@ Da `vite.config.js` `base: './'` verwendet, funktioniert die Seite sowohl unter
 Hero, „Über uns" und die Referenzen-Galerie nutzen aktuell Platzhalterfotos von Unsplash.
 Eigene Bilder einfach in den Ordner `public/img/` legen und im Code als `img/dateiname.jpg`
 referenzieren (z. B. in `ReferencesSection.jsx`, `Hero.jsx`, `AboutSection.jsx`).
+# sauerland_sanierung
