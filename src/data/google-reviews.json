@@ -4,7 +4,7 @@
   "googleMapsUri": "https://maps.google.com/?cid=15951589766401989645&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA",
   "rating": 5,
   "reviewCount": 3,
-  "updatedAt": "2026-06-15T13:30:02.521Z",
+  "updatedAt": "2026-07-01T07:51:28.053Z",
   "reviews": [
     {
       "author": "Sandra ter Fehr",
@@ -14,18 +14,18 @@
       "uri": "https://www.google.com/maps/contrib/117483842048472131766/reviews"
     },
     {
-      "author": "Paul Mertens",
-      "rating": 5,
-      "date": "vor einem Jahr",
-      "text": "Bestes Unternehmen hier im Umkreis hammer geil",
-      "uri": "https://www.google.com/maps/contrib/116171779080670734338/reviews"
-    },
-    {
       "author": "Stefan Slupikowski",
       "rating": 5,
       "date": "vor 2 Jahren",
       "text": "Sehr kompetenter Ansprechpartner, gute Arbeit und sehr zuverlässig. Gerne wieder.",
       "uri": "https://www.google.com/maps/contrib/101236546958939099614/reviews"
+    },
+    {
+      "author": "Paul Mertens",
+      "rating": 5,
+      "date": "vor einem Jahr",
+      "text": "Bestes Unternehmen hier im Umkreis hammer geil",
+      "uri": "https://www.google.com/maps/contrib/116171779080670734338/reviews"
     }
   ]
 }
